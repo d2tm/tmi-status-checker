@@ -31,7 +31,7 @@ func main() {
 	}
 }
 
-func generateMessageBody(club_name string) string {
+func generateMessageBody(club_number string, club_name string) string {
 	if club_name == "" {
 		club_name = "Toastmasters Club"
 	}
@@ -40,7 +40,9 @@ Dear %s Members,
 
 %s
 
+https://dashboards.toastmasters.org/ClubReport.aspx?id=%s
+
 Best Regards,
 Executive Team
-	`, club_name, notify.GetMessage())
+	`, club_name, notify.GetMessage(), club_number)
 }
