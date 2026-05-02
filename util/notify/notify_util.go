@@ -1,10 +1,8 @@
 package notify
 
 import (
-	"fmt"
 	"log"
 	"os"
-	"regexp"
 	"time"
 
 	util "github.com/newhorizonsarizona/tmi-status-checker/util"
@@ -162,23 +160,4 @@ func GetMessage() string {
 
 	question := util.QuestionBank[int(currentTime.Month())] + string(yaml)
 	return util.Chat(question + os.Getenv("CHAT_OUTPUT_FORMAT_PROMPT"))
-}
-
-func ReplaceWithCorpTerms(message_body string) string {
-	corp_message_body := message_body
-	for idx, corp_value := range CorporateTerms {
-		fmt.Printf("Corp Term #%d: Replacing %s with %s\n", idx+1, corp_value["tm_term"], corp_value["corp_term"])
-		corp_message_body = caseInsensitiveReplacer(corp_message_body, corp_value["tm_term"], corp_value["corp_term"])
-	}
-	return corp_message_body
-}
-
-func caseInsensitiveReplacer(message string, toReplace string, replaceWith string) string {
-	pattern := fmt.Sprintf(
-		`(?i)(^|[^-])(%s)($|[^-])`,
-		toReplace,
-	)
-	var regx = regexp.MustCompile(pattern)
-	escapedReplaceWith := regexp.QuoteMeta(replaceWith)
-	return regx.ReplaceAllString(message, `${1}`+escapedReplaceWith+`${3}`)
 }
