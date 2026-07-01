@@ -14,22 +14,22 @@ Distinguished Club Program Report:
             Required: "20"
             To Date: ""
         Overall:
-            Current: "4"
-            Distinguished: "No"
+            Current: "7"
+            Select Distinguished: "Yes"
             Target: "10"
-            Year: 2025-2026
+            Year: 2026-2027
     Education:
         Level 1 awards:
             achieved: "1"
             status: 3 Level 1s needed
             target: "4"
         Level 2 awards:
-            achieved: "1"
-            status: 1 Level 2 needed
+            achieved: "2"
+            status: Achieved
             target: "2"
         Level 3 awards:
-            achieved: "1"
-            status: 1 Level 3 needed
+            achieved: "2"
+            status: Achieved
             target: "2"
         Level 4; Path Completion; or DTM award:
             achieved: "1"
@@ -40,13 +40,13 @@ Distinguished Club Program Report:
             status: 2 Level 2s needed
             target: "2"
         One more Level 4; Path Completion; or DTM award:
-            achieved: "0"
-            status: 1 more Level 4, Path Completion, or DTM needed
+            achieved: "1"
+            status: Achieved
             target: "1"
     Membership:
         More new members:
-            achieved: "0"
-            status: 4 New Members needed
+            achieved: "1"
+            status: 3 New Members needed
             target: "4"
         New members:
             achieved: "4"
